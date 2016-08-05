@@ -1,6 +1,7 @@
 package com.pingan.autotest_ui.base;
 
 import com.oracle.tools.packager.Log;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -42,7 +43,7 @@ public class AutoTestBase {
             Log.info("mobileCapabilities.port = " + port );
             Log.info("mobileCapabilities.udid = " + udid );
             Log.info("mobileCapabilities.timeout = " + timeout );
-
+            //初始化测试组件
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability(MobileCapabilityType.APP,app.getAbsolutePath());
             capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME,"platformName");
@@ -78,7 +79,7 @@ public class AutoTestBase {
     @AfterSuite(alwaysRun = true)
     public void afterSuite(){
         if (platformName.toLowerCase().contains("android")||platformName.toLowerCase().contains("ios")){
-
+            ((AppiumDriver) driver).removeApp("com.pingan.yzt");
         }
         driver.quit();
     }

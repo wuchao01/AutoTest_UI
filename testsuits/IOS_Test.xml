@@ -9,7 +9,7 @@
     <parameter name="appActivity" value=""/>
     <parameter name="port" value="6663" />
     <parameter name="udid" value="560d1ec4bf09b200474d9fc50d8499ef591416" />
-    <parameter name="timeout" value="30000" />
+    <parameter name="timeout" value="10000" />
     <test name="Iphone6s">
         <parameter name="login_userName" value="13711122467"/>
         <parameter name="login_passWord" value="qweqwe123"/>
