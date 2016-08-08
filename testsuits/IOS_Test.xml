@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="IOS_Test">
     <parameter name="filePath" value="/Users/apple/Desktop/apk_package" />
-    <parameter name="appName" value="4.2.2.ipa" />
+    <parameter name="appName" value="4.3.1.ipa" />
     <parameter name="platformName" value="iOS" />
     <parameter name="platformVersion" value="9.3.1" />
     <parameter name="deviceName" value="iPhone" />

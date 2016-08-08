@@ -10,6 +10,10 @@ import java.io.InputStreamReader;
  * Created by wuchao on 16/8/3.
  */
 public class Tools {
+    /**
+     * 调用并执行cmd命令，运行后关闭cmd窗口
+     * @param cmd
+     */
     public static String runCMD(String cmd) {
         String cmdOut = null;
         BufferedReader br = null;
