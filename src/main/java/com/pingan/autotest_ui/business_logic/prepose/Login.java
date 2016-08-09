@@ -13,6 +13,6 @@ public class Login extends AutoTestBase{
     public void slideLoginPage(){
         operateBase.acceptAlert();
         operateBase.swipeToRight(1000);
-        //wait = new WebDriverWait(driver);
+       // wait = new WebDriverWait(driver,10).until();
     }
 }
