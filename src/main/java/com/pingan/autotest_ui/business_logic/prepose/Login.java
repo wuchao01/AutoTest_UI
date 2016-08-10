@@ -2,6 +2,7 @@ package com.pingan.autotest_ui.business_logic.prepose;
 
 import com.pingan.autotest_ui.base.AppOperate;
 import com.pingan.autotest_ui.base.AutoTestBase;
+import com.pingan.autotest_ui.object_page.Element_Common;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
@@ -10,6 +11,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Login extends AutoTestBase{
     public AppOperate operateBase;
     public WebDriverWait wait;
+    public Element_Common element_common;
+
+    public Login(){
+        element_common = new Element_Common(driver);
+    }
+
     public void slideLoginPage(){
         operateBase.acceptAlert();
         operateBase.swipeToRight(1000);
