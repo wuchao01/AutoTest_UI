@@ -1,6 +1,7 @@
 package com.pingan.autotest_ui.base;
 
 import com.oracle.tools.packager.Log;
+import com.pingan.autotest_ui.util.StartAppiumServer;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
@@ -22,6 +23,7 @@ import java.util.concurrent.TimeUnit;
 public class AutoTestBase {
     protected static WebDriver driver;
     public static String platformName;
+    public StartAppiumServer startAppiumServer;
 
     public static WebDriver getDriver() {
         return driver;
@@ -43,6 +45,7 @@ public class AutoTestBase {
             Log.info("mobileCapabilities.port = " + port );
             Log.info("mobileCapabilities.udid = " + udid );
             Log.info("mobileCapabilities.timeout = " + timeout );
+            startAppiumServer.run();
             //初始化测试组件
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability(MobileCapabilityType.APP,app.getAbsolutePath());
@@ -79,7 +82,7 @@ public class AutoTestBase {
     @AfterSuite(alwaysRun = true)
     public void afterSuite(){
         if (platformName.toLowerCase().contains("android")||platformName.toLowerCase().contains("ios")){
-            ((AppiumDriver) driver).removeApp("com.pingan.yzt");
+            ((AppiumDriver) driver).removeApp("com.pingan.yztDev");
         }
         driver.quit();
     }

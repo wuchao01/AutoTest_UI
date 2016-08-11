@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="IOS_Test">
-    <parameter name="filePath" value="/Users/apple/Desktop/apk_package" />
-    <parameter name="appName" value="4.3.1.ipa" />
+    <parameter name="filePath" value="/Users/apple/Desktop/apk_package/" />
+    <parameter name="appName" value="Payload.ipa" />
     <parameter name="platformName" value="iOS" />
-    <parameter name="platformVersion" value="9.3.1" />
+    <parameter name="platformVersion" value="9.3.4" />
     <parameter name="deviceName" value="iPhone" />
     <parameter name="appPackage" value=""/>
     <parameter name="appActivity" value=""/>
     <parameter name="port" value="6663" />
-    <parameter name="udid" value="560d1ec4bf09b200474d9fc50d8499ef591416" />
+    <parameter name="udid" value="560d1ec4bf09b200474d9fc50d8499ef59141649" />
     <parameter name="timeout" value="10000" />
     <test name="Iphone6s">
         <parameter name="login_userName" value="13711122467"/>
         <parameter name="login_passWord" value="qweqwe123"/>
         <classes>
-            <class name="com.pingan.autotest_ui.base.AutoTestBase" />
+            <class name="com.pingan.autotest_ui.testsuits.login.Personal_Tests" />
         </classes>
     </test>
 </suite>

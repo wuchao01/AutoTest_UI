@@ -76,10 +76,10 @@
     <orderEntry type="library" scope="TEST" name="Gradle: commons-beanutils:commons-beanutils:1.8.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: commons-digester:commons-digester:1.8.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.freemarker:freemarker:2.3.18" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-support:2.47.1" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-api:2.47.1" level="project" />
-    <orderEntry type="library" name="Gradle: org.testng:testng:6.9.4" level="project" />
     <orderEntry type="library" name="Gradle: io.appium:java-client:3.2.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-api:2.47.1" level="project" />
     <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-remote-driver:2.47.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-support:2.47.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.testng:testng:6.9.4" level="project" />
   </component>
 </module>
