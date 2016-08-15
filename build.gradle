@@ -10,10 +10,28 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
     testCompile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.47.1'
     testCompile group: 'org.seleniumhq.selenium', name: 'selenium-server', version: '2.47.1'
     testCompile group: 'org.testng', name: 'testng', version: '6.9.4'
     testCompile group: 'io.appium', name: 'java-client', version: '3.2.0'
     testCompile group: 'org.freemarker', name: 'freemarker', version: '2.3.18'
+}
+
+test{
+    useTestNG("/Users/apple/Documents/gitlab/AutoTest_UI/AutoTest_UI.iml");
+
+    beforeTest { descriptor ->
+        logger.lifecycle("Running test: " + descriptor)
+    }
+    onOutput { descriptor,event ->
+        logger.lifecycle("Test: " + descriptor + " produced standard out/err: " + event.message )
+    }
+}
+
+uploadArchives {
+    repositories {
+        flatDir {
+            dirs 'repos'
+        }
+    }
 }
