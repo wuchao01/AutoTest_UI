@@ -18,8 +18,10 @@ dependencies {
 }
 
 test{
-    useTestNG("/Users/apple/Documents/gitlab/AutoTest_UI/AutoTest_UI.iml");
-
+    //useTestNG("/Users/apple/Documents/gitlab/AutoTest_UI/AutoTest_UI.iml");
+    useTestNG(){
+        suites(file('/Users/wuchao/Documents/TestProject/AutoTest_UI/testsuits/IOS_Test.xml'))
+    }
     beforeTest { descriptor ->
         logger.lifecycle("Running test: " + descriptor)
     }
@@ -27,6 +29,7 @@ test{
         logger.lifecycle("Test: " + descriptor + " produced standard out/err: " + event.message )
     }
 }
+
 
 uploadArchives {
     repositories {
