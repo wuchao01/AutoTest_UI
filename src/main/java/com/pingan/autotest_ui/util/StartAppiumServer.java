@@ -13,7 +13,7 @@ public class StartAppiumServer {
     public StartAppiumServer(String udid,int port){
         this.udid = udid;
         this.port = port;
-        appiumPath = "/Users/apple/Documents/appium/bin/";
+        appiumPath = "/Users/wuchao/Documents/AutoTools/Appium.app/Contents/Resources/node_modules/appium/bin/";
     }
 
     /**
