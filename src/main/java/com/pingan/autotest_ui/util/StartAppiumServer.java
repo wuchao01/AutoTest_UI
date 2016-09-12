@@ -20,7 +20,7 @@ public class StartAppiumServer {
      * 启动appium服务
      */
     public void run(){
-        String commod = "node" + appiumPath + "appium.js 127.0.0.1 -p" + port + " --session-override";
+        String commod = "node" + appiumPath + "appium.js -a 127.0.0.1 -p" + port + "-U" + udid + " --session-override";
         Log.info("run " + udid + " appiumServer:" + port + ".....");
         Log.info("start appium ->>>" + commod);
         Tools.runCMD(commod);
